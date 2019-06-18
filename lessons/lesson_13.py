@@ -1,4 +1,4 @@
-#nested comparison operators
+# nested comparison operators
 temperature = -1
 
 if temperature > 30:

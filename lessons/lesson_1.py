@@ -1,16 +1,16 @@
-#Printing to console
+# Printing to console
 print('hello world')
 
-#expression
+# expression
 print('*' * 2)
 
-#integer data type
+# integer data type
 price = 10
 print(price)
 
-#float data type
+# float data type
 rating = 4.9
 print(rating)
 
-#boolean data type
+# boolean data type
 is_published = True

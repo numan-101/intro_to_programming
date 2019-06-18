@@ -1,4 +1,4 @@
-#String format
+# String format
 first_name = "Anas"
 last_name = "Najaa"
 message = first_name + " [" + last_name + "]"

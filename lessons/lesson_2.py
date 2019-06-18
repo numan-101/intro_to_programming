@@ -1,5 +1,5 @@
-#user input
+# user input
 name = input('What is your name? ')
 
-#string concatenation
+# string concatenation
 print('hi ' + name)

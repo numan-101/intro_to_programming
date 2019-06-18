@@ -1,4 +1,4 @@
-#while loops and escapr chars
+# while loops and escape chars
 i = 1
 while i <= 5:
     print(i)

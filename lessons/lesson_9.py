@@ -1,7 +1,7 @@
-#Operators Precedence
-#**
-#* / % //
-#+ -
+# Operators Precedence
+# **
+# * / % //
+# + -
 
 x = 10 + 3 * 2
 print(x)

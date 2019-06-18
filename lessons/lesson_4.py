@@ -1,4 +1,4 @@
-#String array
+# String array
 course = "Anas's python course"
 print(course[0])
 print(course[-1])
@@ -9,7 +9,7 @@ course_copy = course[:]
 
 print(course_copy)
 
-#multi-line string
+# multi-line string
 mail = """
 Hello
 Anas
