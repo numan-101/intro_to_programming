@@ -1,3 +1,5 @@
+# strings format
+# variables
 types_of_people = 10
 x = f"There are {types_of_people} types of people."
 binary = "binary"

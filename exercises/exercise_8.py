@@ -1,3 +1,6 @@
+# loop
+# input
+# data type conversion
 a = 1
 s = 0
 print('Enter Numbers to add to the sum.')

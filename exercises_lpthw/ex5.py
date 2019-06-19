@@ -1,3 +1,5 @@
+# variables
+# strings format
 my_name = 'Zed A. Shaw'
 my_age=35#notalie
 my_height = 74 # inches

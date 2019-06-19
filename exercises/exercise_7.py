@@ -1,4 +1,4 @@
-#gussing game
+# gussing game
 import random
 correct_answer = random.randrange(10)
 user_answer = 0

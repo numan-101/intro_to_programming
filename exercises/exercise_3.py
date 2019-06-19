@@ -1,4 +1,5 @@
-#credit evaluation
+# credit evaluation
+# no input
 has_good_credit = False
 price = 1000000
 down_pmt = 0

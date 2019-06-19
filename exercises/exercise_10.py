@@ -1,3 +1,6 @@
+# loop
+# input
+# data type conversion
 count = 0
 sum = 0.0
 number = 1

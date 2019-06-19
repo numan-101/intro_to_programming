@@ -1,3 +1,7 @@
+# modules
+# functions
+# loop
+
 import random
 
 # global vars
