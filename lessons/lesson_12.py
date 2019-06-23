@@ -10,4 +10,4 @@ if not has_criminal_record:
     elif has_high_income or has_good_credit:
         print("Eligible for small loan")
 else:
-    print("laon denied, creminal record found")
+    print("loan denied, criminal record found")
