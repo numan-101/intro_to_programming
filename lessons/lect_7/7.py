@@ -34,7 +34,7 @@ class Flight:
     def aircraft_model(self):
         return self._aircraft.model()
 
-    def allocate_seat(seat, passenger):
+    def allocate_seat(self, seat, passenger):
         '''Allocate seats to passengers
         Args: 
             seat: A seat designator such as '12C' or '21F'.
@@ -89,4 +89,22 @@ class Aircraft:
 f = Flight('BA758', Aircraft('G-EUPT', 'Airbus A319', num_rows=22, num_seats_per_row=6))
 
 from pprint import pprint as pp
+pp(f._seating)
+
+f.allocate_seat('12A', 'Anas Najaa')
+
+pp(f._seating)
+
+# f.allocate_seat('12A', 'Ahmed')
+
+f.allocate_seat('15F', 'Zaher')
+f.allocate_seat('15E', 'Fahed')
+
+# f.allocate_seat('E27', 'Ammar')
+
+f.allocate_seat('1C', 'Rami')
+f.allocate_seat('1D', 'Asad')
+
+# f.allocate_seat('DD', 'Eyad')
+
 pp(f._seating)

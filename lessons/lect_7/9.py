@@ -1,3 +1,7 @@
+# Tell! Don't ask.
+# Tell objects what to do.
+# Dont' ask for their state.
+
 from pprint import pprint as pp
 class Flight:
     ''' A Flight with a particular passenger aircraft '''
@@ -102,6 +106,20 @@ class Flight:
                     if s is None:
                         seats += 1
         return seats
+    
+
+    def make_boarding_cards(self, card_printer):
+        for passenger, seat in sorted(self._passenger_seats()):
+            card_printer(passenger, seat, self.number(), self.aircraft_model())
+
+    def _passenger_seats(self):
+        '''An iterable series of passenger seating allocations'''
+        row_numbers, seat_letters = self._aircraft.seating_plan()
+        for row in row_numbers:
+            for letter in seat_letters:
+                passenger = self._seating[row][letter]
+                if passenger is not None:
+                    yield(passenger, "{}{}".format(row, letter))
         
 
 class Aircraft:
@@ -133,12 +151,22 @@ def make_flight():
     f.allocate_seat('1D', 'Asad')
     return f
 
+
+# Polymorphism
+# Using objects of different types through a common interface
+def console_card_printer(passenger, seat, flight_number, aircraft):
+    output =    "| Name: {0}" \
+                "  Flight: {1}" \
+                "  Seat: {2}" \
+                "  Aircraft: {3}" \
+                " |".format(passenger, flight_number, seat, aircraft)
+    banner = '+' + '-' * (len(output) - 2) + '+'
+    border = '|' + ' ' * (len(output) - 2) + '|'
+    lines = [banner, border, output, border, banner]
+    card = '\n'.join(lines)
+    print(card)
+    print()
+
 f = make_flight()
 
-pp(f._seating)
-
-f.relocate_passengar('12A', '15D')
-
-pp(f._seating)
-
-pp(f.num_available_seats())
+f.make_boarding_cards(console_card_printer)
