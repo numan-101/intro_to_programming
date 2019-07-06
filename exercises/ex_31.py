@@ -6,12 +6,14 @@ import random
 
 # global vars
 turns = 10
+score = 0
 
 def generate_random(upper):
     r = random.randint(1, upper)
     return r
 
 def main():
+    global score 
     run = True
     num1 = generate_random(10)
     num2 = generate_random(10)
@@ -23,6 +25,7 @@ def main():
             if int(ans) == result:
                 print('Correct!')
                 run = False
+                score += 1
             else:
                 print('Incorrect, try again')
         else:
@@ -30,3 +33,5 @@ def main():
 
 for x in range(turns):
     main()
+
+print(f'score: {score}/10')

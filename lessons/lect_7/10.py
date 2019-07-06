@@ -89,7 +89,7 @@ class Flight:
 
         from_row, from_letter = self._parse_seat(from_seat)
         if self._seating[from_row][from_letter] is None:
-            raise ValueError('No passenger to relocate in seat'.format(from_seat))
+            raise ValueError('No passenger to relocate in seat {}'.format(from_seat))
 
         
         to_row, to_letter = self._parse_seat(to_seat)
